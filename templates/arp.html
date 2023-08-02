@@ -1,0 +1,64 @@
+<!doctype html>
+
+
+<head><title>Test</title> 
+    <meta charset=utf-8></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+    <script src="static/js/arp.js"></script>
+    
+ </head>
+    <body>
+        <h1>ARP Network Discovery</h1>
+   
+            <div class="container">
+                <form class="form-signin"  role="form">
+                <h2 class="form-signin-heading">
+                    
+                Enter The required Data to start scanning.</h2>
+                <input type="text" id="ip" name="ip" class="form-control" placeholder="IP" required autofocus>
+                <input type="text" id="erange" name="erange" class="form-control" placeholder="End Range" required>       
+                <input type="text" id="srange" name="srange" class="form-control" placeholder="Start Range" required autofocus>
+                <input type="text" id="timeout" name="timeout" class="form-control" placeholder="Timeout" required>       
+
+                <button class="btn btn-lg btn-primary btn-block" type="button">Start</button>
+                </form>   
+             </div>  
+             <div><h3>Result:</h3><p id="result"></p></div>
+        
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+<script>
+var mylist=[]
+
+
+var xValues = {{ key|safe }};
+var yValues = {{val}};
+var barColors = [
+"#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+new Chart("myChart", {
+  type: "pie",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "Packets by Protocols"
+    }
+  }
+});
+</script>
+
+    </body>

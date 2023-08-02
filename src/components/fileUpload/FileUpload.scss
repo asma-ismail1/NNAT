@@ -1,0 +1,48 @@
+.upload{
+    background-color: white;
+    justify-content: center;
+    margin: 1%;
+    border-radius: 10px;
+
+}
+.rowC{display:flex; flex-direction:row; margin: 1%;}
+$circleDiam: 100px;
+  $innerCircleDiam: $circleDiam/3;
+  $rotatingCircleDiam: $circleDiam/5;
+
+  $innerCirclePos: ($circleDiam - $innerCircleDiam)/2;
+  $rotatingCirclePosLeft: ($circleDiam - $innerCircleDiam)/2 - $rotatingCircleDiam;
+  $rotatingCirclePosTop: $circleDiam/2 - $rotatingCircleDiam/2;
+
+  //The circle wrapper
+  .loader {
+  text-indent: 999em;
+  width: $circleDiam;
+  height: $circleDiam;
+  position: fixed;
+  top: 50%; left: 50%;
+  margin: -$circleDiam/2;
+  background-color: #888;
+  box-shadow: 0 2px 1px rgba(0,0,0,.3) inset;
+  border-radius: 50%;
+  
+
+  // The inner, rotating circle
+  &:after {
+    content: '';
+    position: absolute;
+    top: $rotatingCirclePosTop;
+    left: $rotatingCirclePosLeft;
+    background-color: #fff;
+    height: $rotatingCircleDiam;
+    width: $rotatingCircleDiam;
+    animation: spin 1s linear infinite;
+    border-radius: 50%;
+    transform-origin: $innerCirclePos/2 + $rotatingCircleDiam;
+  }
+  }
+
+  // Spin it!
+  @keyframes spin {
+    100% { transform: rotate(360deg); }
+  }

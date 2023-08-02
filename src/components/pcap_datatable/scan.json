@@ -1,0 +1,46 @@
+[
+    {
+        "id": "50",
+        "Protocol": "ARP",
+        "network": "88:3f:d3:5c:25:f1",
+        "IP": "192.168.100.1",
+        "srange": 1,
+        "erange": 3,
+        "timeout": 1,
+        "response": "88:3f:d3:5c:25:f1\t192.168.100.1\n",
+        "date": "2022-09-30 12:17:15"
+    },
+    {
+        "id": "51",
+        "Protocol": "ARP",
+        "network": "gateway unreachable",
+        "IP": "192.168.16.1",
+        "srange": 1,
+        "erange": 4,
+        "timeout": 1,
+        "response": "",
+        "date": "2022-09-30 12:18:27"
+    },
+    {
+        "id": "52",
+        "Protocol": "ARP",
+        "network": "gateway unreachable",
+        "IP": "192.168.100.1",
+        "srange": 1,
+        "erange": 5,
+        "timeout": 1,
+        "response": "",
+        "date": "2022-10-01 22:38:31"
+    },
+    {
+        "id": "53",
+        "Protocol": "ARP",
+        "network": "38:01:46:fa:e2:af",
+        "IP": "192.168.16.1",
+        "srange": 1,
+        "erange": 5,
+        "timeout": 1,
+        "response": "38:01:46:fa:e2:af\t192.168.16.1\n",
+        "date": "2022-10-01 22:38:46"
+    }
+]
